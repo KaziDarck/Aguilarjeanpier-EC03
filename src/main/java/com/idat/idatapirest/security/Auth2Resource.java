@@ -21,7 +21,7 @@ public class Auth2Resource extends ResourceServerConfigurerAdapter{
 	public void configure(HttpSecurity http) throws Exception {
 		
 		http.authorizeRequests()
-			.antMatchers("/producto/v1/*").permitAll()
+			.antMatchers("/hospital/v1/*").permitAll()
 			.antMatchers("/cliente/v1/*").permitAll()
 			.and()
 			.exceptionHandling()

@@ -35,7 +35,7 @@ public class JWTUserDetailService implements UserDetailsService{
 			return new User(usuario.getUsuario(), new BCryptPasswordEncoder().encode(usuario.getContrasenia()) , listaGranted);
 			
 		}else {
-			throw new UsernameNotFoundException("El usuario no existe");
+			throw new UsernameNotFoundException("El usuario ingresado no existe o la conexion esta errada");
 		}
 	}
 
